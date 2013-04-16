@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>Peripheral IV Analysis</title> 
+  <style type="text/css">
+  
+ /* Rest Class Start */ 	
+	 /* page 1 start */
+	 body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, form, fieldset, input, textarea, p, blockquote, th, span {margin:0pt;	padding:0pt;}
+	
+	table {	border-collapse:collapse;	border-spacing:0pt;}
+	img {	border:0pt none;	_background: none;}
+	fieldset {	border:2px solid #EEEEEE; padding:5px 10px 10px;}
+	legend {color:#880000;	font-size:14px;	font-weight:bold;	padding:0pt 10px;}
+	address, caption, cite, code, dfn, th, var {	font-style:normal;	font-weight:normal;}
+	ol, ul {	list-style-image:none;	list-style-position:outside;	list-style-type:none;}
+	caption, th {	text-align:left;}
+	h1, h2, h3, h4, h5, h6 {font-weight:normal;}
+	li, span {	text-align:left;}
+	
+	q:before, q:after {	content:'';}
+	assr, acronym {	border:0pt none;}
+	
+	.ct-fl{float: left;}
+	.ct-fr{float: right;}
+	.ct-clr{clear: both;}
+	/*background-color:orange;*/
+      body{ font-family: Arial, Helvetica, sans-serif; font-size:100%; font-weight:normal;}
+      .ct-wrap{width:8.26in; }
+		.ct-wrap h1{font-size:3em; color:#333; font-weight: bold;}
+		.ct-wrap h2{font-size:1.5em; color:#0e76bc; font-weight:normal;}
+		.ct-text-grey{font-size:0.7em; color:#999; text-transform: uppercase; font-weight: bold;}
+ 		.ct-overall-pd{padding: 4em;}
+ 		.ct-pad-t{padding-top:3em;}
+ 		.ct-text-grey-cont{font-size:0.8em; color:#999; line-height:1em; padding-top:0.5em;}
+ 	.ct-yn-table{width:100%; margin-top:2em;}
+ 		.ct-yn-table th{font-size:1.5em; color:#0e76bc; font-weight:normal; border-bottom: #333 2px solid; padding-bottom:0.5em;}
+ 		.ct-yn-table td{font-size:0.8em; color:#999; line-height:1em; width:60%; border-bottom: #939598 1px solid; padding:0.8em 0.8em 0.8em 0em;}
+ 		.ct-yn-table td + td{font-size:0.8em; color:#333; line-height:1em; width:40%; font-weight:bold; text-align:right; padding:0.8em 0.8em 0.8em 0em;}
+ 	
+	
+	 /* page 1 end */
+	
+	/* page 2 start */
+	
+
+		
+		.ct-brd-b{border-bottom: 2px solid #333;}
+		.ct-text-blue{font-size:1.5em; color:#0e76bc; font-weight:normal; line-height:1.1em;}
+		.ct-text-black{font-size:0.8em; color:#333; font-weight:bold;}
+		.ct-text-red{font-size:3em; color:#ed1c24; font-weight:bold;}
+		.ct-text-grey{font-size:0.7em; color:#999; text-transform: uppercase; font-weight: bold;}
+		.ct-text-grey2{font-size:1.2em; color:#939598; font-weight: bold;}
+		.ct-text-grey-bold{font-size:2em; color:#58585a; font-weight:bold;}
+		.ct-pd-t{padding-top:2em;}
+		.ct-text-green{font-size:2em; color:#8eb13d; font-weight: bold;}
+		.ct-overall-pd{padding: 4em;}
+		
+	
+	
+	.ct-pad-t{padding-top:3em;}
+ 		.ct-text-grey-cont{font-size:0.8em; color:#afb0b2; line-height:1em; padding-top:0.5em;}
+ 	.ct-dc-table{width:100%; margin-top:4em;}
+ 		.ct-dc-table th{font-size:1.5em; color:#0e76bc; font-weight:normal; border-bottom: #333 1px solid; padding-bottom:0.5em;}
+ 		.ct-dc-table td{font-size:1em; color:#333; line-height:1em; width:30%; border-bottom: #939598 1px solid; padding:0.8em 0.8em 0.8em 0em; font-weight: bold;}
+ 		.ct-dc-table td + td{width:20%; border-bottom: #939598 1px solid; padding:0.5em 0.5em 0.5em 0em; font-weight: normal; font-size: 0.8em;}
+ 			.ct-dc-table-red{font-size:1.5em;  font-weight:bold; color:#ed1c24; line-height: 1em;  text-align: right;}
+ 			.ct-dc-table-span{font-size:1.0em;  font-weight:bold; color:#95959f; line-height: 1em; text-align: right; display: block;}
+ 		.ct-dc-table td + td + td{font-size:0.8em; color:#afb0b2; line-height:1em; width:25%; border-bottom: #939598 1px solid; padding:0.8em 0.8em 0.8em 0em;}
+ 			.ct-dc-table-black{font-size:1.5em;  font-weight:bold; color:#333; line-height: 1em;  text-align: right;}
+ 		.ct-dc-table td + td + td + td{font-size:0.8em; color:#afb0b2; line-height:1em; width:25%; border-bottom: #939598 1px solid; padding:0.8em 0.8em 0.8em 0em;}
+ 			.ct-dc-table-green{font-size:1.5em;  font-weight:bold; color:#8eb13d; line-height: 1em;  text-align: right;}
+		/* page 2 end */
+		
+		/* page 3 start */
+		
+		.ct-pad-t{padding-top:3em;}
+ 		.ct-text-grey-cont{font-size:0.8em; color:#afb0b2; line-height:1em; padding-top:0.5em;}
+ 	.ct-dc-table, .ct-fr-table{width:100%; margin-top:4em;}
+ 		.ct-dc-table th{font-size:1.5em; color:#0e76bc; font-weight:normal; border-bottom: #333 1px solid; padding-bottom:0.5em;}
+ 		.ct-dc-table td{font-size:1em; color:#333; line-height:1em; width:30%; border-bottom: #939598 1px solid; padding:0.8em 0.8em 0.8em 0em; font-weight: bold;}
+ 		.ct-dc-table td + td{width:20%; border-bottom: #939598 1px solid; padding:0.5em 0.5em 0.5em 0em; font-weight: normal; font-size: 0.8em;}
+ 			.ct-dc-table-red{font-size:1.5em;  font-weight:bold; color:#ed1c24; line-height: 1em;  text-align: right;}
+ 			.ct-dc-table-span{font-size:1.0em;  font-weight:bold; color:#95959f; line-height: 1em; text-align: right; display: block;}
+ 		.ct-dc-table td + td + td{font-size:0.8em; color:#afb0b2; line-height:1em; width:25%; border-bottom: #939598 1px solid; padding:0.8em 0.8em 0.8em 0em;}
+ 			.ct-dc-table-black{font-size:1.5em;  font-weight:bold; color:#333; line-height: 1em;  text-align: right;}
+ 		.ct-dc-table td + td + td + td{font-size:0.8em; color:#afb0b2; line-height:1em; width:25%; border-bottom: #939598 1px solid; padding:0.8em 0.8em 0.8em 0em;}
+ 			.ct-dc-table-green{font-size:1.5em;  font-weight:bold; color:#8eb13d; line-height: 1em;  text-align: right;}
+			
+		/* page 3 end*/
+	
+/* Rest Class end */
+  	</style>
+  	
+</head>
+
+<body>
+	<!-- page 1 Start -->
+  <div class="ct-wrap">
+  	<div class="ct-overall-pd">
+	    <h1>Peripheral IV Analysis</h1>
+	    <p class="ct-text-grey">CREATED ON JANUARY 9, 2013 FOR JOHN DOE</p>
+	    <div class="ct-pad-t">
+	    	<h2>About this Analysis</h2>
+	    	<p class="ct-text-grey-cont">Numbers in this analysis are based on answers given to the Centurion Estimator survey, analyzing material, labor, and risk costs for peripheral IV
+treatments, giving you the true cost for your PIVs. The survey questions and answers you gave are listed below:</p>
+			
+			<table class="ct-yn-table">
+				<tr>
+					<th colspan="2">Your Answer</th>
+				</tr>
+				<tr>
+					<td>What would be your estimate of the number of patients admitted into your hospital every month?</td>
+					<td>1177</td>
+				</tr>
+				<tr>
+					<td>What percentage of your patients would you estimate receive a peripheral IV
+catheter during their hospital stay?</td>
+					<td>85%</td>
+				</tr>
+				<tr>
+					<td>What method of securement is your hospital currently using?</td>
+					<td>Tape, Bard StatLock, Other</td>
+				</tr>
+				
+				
+				<tr>
+					<td>What is your guess at the material cost (per PIV start) for the products
+your hospital is currently using to dress and secure a PIV?</td>
+					<td>$1.50</td>
+				</tr>
+				
+				<tr>
+					<td>What would you estimate is the average hourly wage for a nurse at your hospital?</td>
+					<td>$38 /hr.</td>
+				</tr>
+				<tr>
+					<td>What is your guess at the total length of time it takes to start a PIV?</td>
+					<td>29 mins.</td>
+				</tr>
+				
+				<tr>
+					<td>What is your estimate on the average number of insertion attempts it takes
+to start a peripheral IV?</td>
+					<td>2</td>
+				</tr>
+				<tr>
+					<td>Based on the complication rates found in studies, what would you guess is
+your hospitals percentage of PIV complications?</td>
+					<td>47%</td>
+				</tr>
+			</table>
+	    </div>
+	    
+    </div>
+  </div>
+  <!-- page 1 End -->
+  
+  <!-- Page 2 Start -->
+  
+  <div class="ct-wrap">
+  	<div class="ct-overall-pd">
+	    <h1>Peripheral IV Analysis</h1>
+	    <p class="ct-text-grey">CREATED ON JANUARY 9, 2013 FOR JOHN DOE</p>
+	    <div class="ct-pad-t">
+	    	<h2 class="ct-brd-b">Restart Costs</h2>
+	    	<div style="overflow: hidden;">
+	    		<div class="ct-fl ct-pd-t" style="width:60%">
+	    			<p class="ct-text-blue">Based on current restart rate(48%)<br> vs. SorbaView SHIELD restart rate (9%)</p>
+	    			<div class="ct-pd-t">
+	    				<p class="ct-text-black">ESTIMATED COSTS DUE TO UNSCHEDULED RESTARTS</p>
+	    				<p class="ct-text-red">$114,432 /yr.</p>
+	    				<p class="ct-text-grey2">$9,536 / mo.</p>
+	    			</div>
+	    			<div style="overflow: hidden" class="ct-pd-t">
+	    				<div class="ct-fl">
+	    					<p class="ct-text-black">ADJUSTED COSTS</p>
+	    					<p class="ct-text-grey-bold">$21,456 /yr.</p>
+	    					<p class="ct-text-grey2">$1,788 / mo.</p>
+	    				</div>
+	    				<div class="ct-fl" style="margin-left:3em">
+	    					<p class="ct-text-black">POTENTIAL SAVINGS</p>
+	    					<p class="ct-text-green">$92,976 /yr.</p>
+	    					<p class="ct-text-grey2">$7,748 / mo.</p>
+	    				</div>
+	    				
+	    			</div>
+	    		</div>
+	    		
+	    		<div class="ct-fr" style="width:40%; text-align:center; ">
+                    <img src="Centurion.png" alt="Centurion Graph img" style="padding-left:1em; padding-top:1em;" />
+	    		</div>
+	    		
+	    	</div>
+			
+			<table class="ct-dc-table">
+				<tr>
+					<th>Direct Cost</th>
+					<th style="text-align: right; font-size:0.6em; color:#95959F; font-weight: bold;">CURRENT</th>
+					<th style="text-align: right; font-size:0.6em; color:#95959F; font-weight: bold;">POTENTIAL</th>
+					<th style="text-align: right; font-size:0.6em; color:#95959F; font-weight: bold;">SAVINGS</th>
+				</tr>
+				<tr>
+					<td>Unscheduled Restarts</td>
+					<td>
+						<p class="ct-dc-table-red">5,760 /yr.</p>
+						<span class="ct-dc-table-span">480 / mo.</span>
+					</td>
+					<td>
+						<p class="ct-dc-table-black">5,760 /yr.</p>
+						<span class="ct-dc-table-span">480 / mo.</span>
+					</td>
+					<td>
+						<p class="ct-dc-table-green">5,760 /yr.</p>
+						<span class="ct-dc-table-span">480 / mo.</span>
+					</td>
+				</tr>
+				<tr>
+					<td>Materials</td>
+					<td>
+						<p class="ct-dc-table-red">$1.50 /ea.</p>
+						<span class="ct-dc-table-span"></span>
+					</td>
+					<td>
+						<p class="ct-dc-table-black">$2.46 /ea.</p>
+						<span class="ct-dc-table-span"></span>
+					</td>
+					<td>
+						
+						<span class="ct-dc-table-span">With your current
+budget you can spend
+$2.46 per PIV start</span>
+					</td>
+				</tr>
+				<tr>
+					<td>Clinician Time Wasted</td>
+					<td>
+						<p class="ct-dc-table-red">2,784 /yr.</p>
+						<span class="ct-dc-table-span">232 / mo.</span>
+					</td>
+					<td>
+						<p class="ct-dc-table-black">522 /yr.</p>
+						<span class="ct-dc-table-span">43 / mo.</span>
+					</td>
+					<td>
+						<p class="ct-dc-table-green">2,262 /yr.</p>
+						<span class="ct-dc-table-span">188 / mo.</span>
+					</td>
+				</tr>
+				
+				<tr>
+					<td>Labor Wasted</td>
+					<td>
+						<p class="ct-dc-table-red">$105,792 /yr.</p>
+						<span class="ct-dc-table-span">$8,816 / mo.</span>
+					</td>
+					<td>
+						<p class="ct-dc-table-black">$19,836 /yr.</p>
+						<span class="ct-dc-table-span">$1,653 / mo.</span>
+					</td>
+					<td>
+						<p class="ct-dc-table-green">$85,956 /yr.</p>
+						<span class="ct-dc-table-span">$7,163 / mo.</span>
+					</td>
+				</tr>
+				<tr>
+					<td>Materials Wasted</td>
+					<td>
+						<p class="ct-dc-table-red">$8,640 /yr.</p>
+						<span class="ct-dc-table-span">$720 / mo.</span>
+					</td>
+					<td>
+						<p class="ct-dc-table-black">$1,620 /yr.</p>
+						<span class="ct-dc-table-span">$135 / mo.</span>
+					</td>
+					<td>
+						<p class="ct-dc-table-green">$7,020 /yr.</p>
+						<span class="ct-dc-table-span">$585 / mo.</span>
+					</td>
+				</tr>
+				
+				
+			</table>
+	    </div>
+	   
+    </div>
+  </div>
+  <!-- Page 2 End -->
+  
+  <!-- page 3 Start -->
+  
+  <div class="ct-wrap">
+  	<div class="ct-overall-pd">
+	    <h1>Peripheral IV Analysis</h1>
+	    <p class="ct-text-grey">CREATED ON JANUARY 9, 2013 FOR JOHN DOE</p>
+	    <div>
+			<table class="ct-dc-table">
+				<tr>
+					<th>Dissatisfaction Costs</th>
+					<th style="text-align: right; font-size:0.6em; color:#95959F; font-weight: bold;">CURRENT</th>
+					<th style="text-align: right; font-size:0.6em; color:#95959F; font-weight: bold;">POTENTIAL</th>
+					<th style="text-align: right; font-size:0.6em; color:#95959F; font-weight: bold;">SAVINGS</th>
+				</tr>
+				<tr>
+					<td>Resticks</td>
+					<td>
+						<p class="ct-dc-table-red">11,520 /yr.</p>
+						<span class="ct-dc-table-span">960 / mo.</span>
+					</td>
+					<td>
+						<p class="ct-dc-table-black">2,160 /yr.</p>
+						<span class="ct-dc-table-span">180 / mo.</span>
+					</td>
+					<td>
+						<p class="ct-dc-table-green">9,360 /yr.</p>
+						<span class="ct-dc-table-span">780 / mo.</span>
+					</td>
+				</tr>
+				<tr>
+					<td>Patient Discomfort</td>
+					<td>
+						<p class="ct-dc-table-red">48%</p>
+						<span class="ct-dc-table-span"></span>
+					</td>
+					<td>
+						<p class="ct-dc-table-black">9%</p>
+						<span class="ct-dc-table-span"></span>
+					</td>
+					<td>
+						
+						<p class="ct-dc-table-green">39%.</p>
+					</td>
+				</tr>
+				
+				
+				
+			</table>
+	    </div>
+	    
+	    
+	    <div>
+			<table class="ct-dc-table">
+				<tr>
+					<th>Financial Risks</th>
+					<th style="text-align: right; font-size:0.6em; color:#95959F; font-weight: bold;"></th>
+					<th style="text-align: right; font-size:0.6em; color:#95959F; font-weight: bold;"></th>
+					<th style="text-align: right; font-size:0.6em; color:#95959F; font-weight: bold;"></th>
+					
+				</tr>
+				<tr>
+					<td>Phlebitis Risk</td>
+					<td>
+						<p class="ct-dc-table-red">Yes</p>
+					</td>
+					<td>
+						<p class="ct-dc-table-black">13%</p>
+					</td>
+					<td>
+						<p class="ct-dc-table-green">13%</p>
+					</td>
+				</tr>
+				<tr>
+					<td>Phlebitis Risk</td>
+					<td>
+						<p class="ct-dc-table-red">Yes</p>
+					</td>
+					<td>
+						<p class="ct-dc-table-black">13%</p>
+					</td>
+					<td>
+						<p class="ct-dc-table-green">13%</p>
+					</td>
+				</tr>
+                <tr>
+					<td>Phlebitis Risk</td>
+					<td>
+						<p class="ct-dc-table-red">Yes</p>
+					</td>
+					<td>
+						<p class="ct-dc-table-black">13%</p>
+					</td>
+					<td>
+						<p class="ct-dc-table-green">13%</p>
+					</td>
+				</tr>
+				
+			</table>
+	    </div>
+	    
+	    
+	 
+    </div>
+  </div>
+  
+  <!-- page 3 end -->
+  
+  
+  
+</body>
+</html>
